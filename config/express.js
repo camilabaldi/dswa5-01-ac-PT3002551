@@ -3,7 +3,8 @@ var home = require('../app/routes/home');
 module.exports = function(){
 	var app = express();
 	//Mudança no parâmetro PORT para publicar no Heroku
-	app.set('port', process.env.PORT);
+	app.set('port', 5000);
+	//app.set('port', process.env.PORT);
 	//Middleware
 	app.use(express.static('./public'));
 	app.set('view engine', 'ejs');
